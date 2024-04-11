@@ -1,0 +1,32 @@
+***** SELECT ข้อมูล Store ที่มี Region เป็น East *****
+SELECT * 
+FROM store.new_table
+where Region = "East";
+
+
+***** SELECT ข้อมูล Product ที่มีขายใน Store New York *****
+SELECT P.Product_key,P.Desciption,P.Brand
+FROM store.product P
+INNER JOIN store.sales_fact S ON P.Product_key = S.Product_key
+INNER JOIN store.store ST ON S.Store_key = ST.Store_key
+WHERE ST.City = 'New York';
+
+
+***** SELECT ยอดรวม Profit ของ Store New York *****
+SELECT sum(S.Profit) as TotalProfit
+FROM store.sales_fact S
+inner join store.store ST on S.Store_key = ST.Store_key
+WHERE ST.City = 'New York';
+
+
+***** DELETE ข้อมูล Sales_fact ที่ Product มี Brand เป็น Wolf *****
+DELETE S
+FROM store.sales_fact S 
+JOIN store.product P ON S.Product_key = P.Product_key
+WHERE P.Brand = 'Wolf';
+
+
+***** Update Brand ของ Product ที่มี Desciption เป็น Toy Story ให้เป็น W *****
+UPDATE store.product 
+SET Brand = 'W'
+WHERE Desciption = 'Toy Story';

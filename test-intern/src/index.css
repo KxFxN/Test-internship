@@ -1,0 +1,61 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgba(138, 138, 138, 0.87);
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-size: 16px;
+}
+
+input {
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 3rem;
+  padding: 0 1.5rem;
+  font-size: 16px;
+}
+
+select {
+  height: 3.25rem;
+  padding: 0 1rem;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+option {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
